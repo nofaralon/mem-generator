@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>MEME Generator</title>
+</head>
+
+<body onload="init()">
+
+    <header class="main-header">
+        <div class="header-container main-layout">
+            <div class="logo"> meme generator</div>
+            <nav class="main-nav">
+                <a href="">Gallery</a>
+                <a href="">My Memes</a>
+                <a href="">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="main-gallery main-layout">
+            <div class="srearch-container">
+                <input class="search-keyword" type="text" placeholder="Enter search keyword">
+                <img src="icons/search-icon.png">
+            </div>
+
+            <div class="img-container">
+                <!-- <div><img src="img/1.jpg"></div>
+                <div><img src="img/2.jpg"></div>
+                <div><img src="img/3.jpg"></div>
+                <div><img src="img/4.jpg"></div>
+                <div><img src="img/5.jpg"></div>
+                <div><img src="img/6.jpg"></div>
+                <div><img src="img/7.jpg"></div>
+                <div><img src="img/8.jpg"></div>
+                <div><img src="img/9.jpg"></div>
+                <div><img src="img/10.jpg"></div>
+                <div><img src="img/11.jpg"></div>
+                <div><img src="img/12.jpg"></div>
+                <div><img src="img/13.jpg"></div>
+                <div><img src="img/14.jpg"></div>
+                <div><img src="img/15.jpg"></div> -->
+            </div>
+
+
+
+        </section>
+        <section class="main-canvas main-layout"></section>
+        <section class="main-my-memes main-layout"></section>
+        <section class="main-about main-layout"></section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container main-layout">
+            <div class="logo"> meme generator</div>
+            <small> © 2021 - all rights reserved - Nofar Alon</small>
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="js/storage.service.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/gallery-service.js"></script>
+    <script src="js/gallery-controller.js"></script>
+    <script src="js/memes-service.js"></script>
+    <!-- <script src="js/memes-controller.js"></script> -->
+
+</body>
+
+</html>
