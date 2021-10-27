@@ -32,9 +32,9 @@
         </section>
         <section class="main-canvas main-layout hide">
             <div class="canvas-container">
-                <canvas id="my-canvas" width="600" height="600" style="outline:1px solid black"></canvas>
+                <canvas id="my-canvas" width="500" height="500" style="outline:1px solid black"></canvas>
                 <div class="canva-aditor">
-                    <input type="text" placeholder="Enter text line">
+                    <input class="text-meme" type="text" placeholder="Enter text line">
                     <div class="buttons-container1">
                         <button> <img class="img-btn" src="icons/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
                         <button> <img  class="img-btn" src="icons/add.png" alt=""></button>
@@ -48,7 +48,7 @@
                         <button> <img class="img-btn" src="icons/align-to-left.png" alt=""></button>
                     </div>
                     <div class="buttons-container3">
-                        <select onchange="onSetfont(this.value)">
+                        <select class="fonts" onchange="onSetfont(this.value)">
                             <option class="impact" value="en">impact</option>
                             <option class="Verdana" value="he">Verdana</option>
                             <option class="Georgia" value="he">Georgia</option>
@@ -57,6 +57,17 @@
                         </select>
                         <button> <img class="img-btn" src="icons/paint-board-and-brush.png" alt=""></button>
                         <button> <img class="img-btn" src="icons/text stroke.png" alt=""></button>
+
+                    </div>
+
+                    <div class="inputs">
+
+                        <a href="#" class="btn" onclick="downloadCanvas(this)" download="my-img.jpg">Download as jpeg</a>
+                        <p class="user-msg"></p>
+
+                        <button class="btn" onclick="uploadImg()">Upload Image from Canvas</button>
+                        <div class="share-container"></div>
+
 
                     </div>
 
@@ -83,10 +94,11 @@
 
     <script src="js/storage.service.js"></script>
     <script src="js/util.js"></script>
+    <!-- <script src="js/memes-controller.js"></script> -->
     <script src="js/memes-service.js"></script>
     <script src="js/gallery-service.js"></script>
     <script src="js/gallery-controller.js"></script>
-    <!-- <script src="js/memes-controller.js"></script> -->
+    <script src="js/upload-service.js"></script>
 
 </body>
 

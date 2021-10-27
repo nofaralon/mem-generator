@@ -24,5 +24,6 @@ function onSelectedImg(imgId) {
     elGallery.classList.add('hide')
     var elCanvas = document.querySelector('.main-canvas')
     elCanvas.classList.remove('hide')
-    drawImg2(imgId)
+    updateGmeme(imgId)
+    drawImg2(gMeme.selectedImgId)
 }

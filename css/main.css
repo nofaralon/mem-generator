@@ -73,7 +73,7 @@ body {
     padding: 20px;
 }
 
-.main-nav>* :not(:last-child) {
+.main-nav>*:not(:last-child) {
     border-right: 1px solid white;
 }
 
@@ -96,7 +96,8 @@ body {
 .srearch-container {
     display: inline-flex;
     border-bottom: 2px solid black;
-    padding: 20px 0;
+    padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 .srearch-container img {
@@ -133,13 +134,80 @@ body {
 
 .canva-aditor {
     flex-grow: 1;
-    background-color: coral;
+    /* background-color: coral; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 0;
+    /* max-width: 80%; */
 }
 
-.img-btn {
+.canva-aditor>* .img-btn {
     height: 30px;
     width: 30px;
     border-radius: 5px;
+}
+
+.canva-aditor>* {
+    margin-bottom: 10px;
+}
+
+.text-meme {
+    height: 20px;
+    width: 180px;
+}
+
+.buttons-container3 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.buttons-container3>* {
+    margin-left: 5px;
+}
+
+.fonts {
+    height: 30px;
+    width: 200px;
+}
+
+.btn {
+    font-family: 'Permanent Marker', cursive;
+    background: #ff7f00;
+    border: 1px solid #ff7f00;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+    user-select: none;
+    /* white-space: nowrap; */
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.inputs {
+    display: flex;
+}
+
+.share-container {
+    display: flex;
+}
+
+.user-msg {
+    position: fixed;
+    height: 150px;
+    width: 360px;
+    top: 100px;
+    left: 20px;
+    font-size: 20px;
+}
+
+.share {
+    background-color: rgb(255, 72, 0);
+    border-color: rgb(255, 72, 0);
+    color: white;
 }
 
 
