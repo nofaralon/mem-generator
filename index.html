@@ -28,39 +28,54 @@
                 <input class="search-keyword" type="text" placeholder="Enter search keyword">
                 <img src="icons/search-icon.png">
             </div>
+            <div class="img-container"></div>
+        </section>
+        <section class="main-canvas main-layout hide">
+            <div class="canvas-container">
+                <canvas id="my-canvas" width="600" height="600" style="outline:1px solid black"></canvas>
+                <div class="canva-aditor">
+                    <input type="text" placeholder="Enter text line">
+                    <div class="buttons-container1">
+                        <button> <img class="img-btn" src="icons/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
+                        <button> <img  class="img-btn" src="icons/add.png" alt=""></button>
+                        <button> <img class="img-btn" src="icons/trash.png" alt=""></button>
+                    </div>
+                    <div class="buttons-container2">
+                        <button> <img class="img-btn" src="icons/increase font - icon.png" alt=""></button>
+                        <button> <img class="img-btn" src="icons/decrease font - icon.png" alt=""></button>
+                        <button> <img class="img-btn" src="icons/align-to-right.png" alt=""></button>
+                        <button> <img class="img-btn" src="icons/center-text-alignment.png" alt=""></button>
+                        <button> <img class="img-btn" src="icons/align-to-left.png" alt=""></button>
+                    </div>
+                    <div class="buttons-container3">
+                        <select onchange="onSetfont(this.value)">
+                            <option class="impact" value="en">impact</option>
+                            <option class="Verdana" value="he">Verdana</option>
+                            <option class="Georgia" value="he">Georgia</option>
+                            <option class="Times" value="he">Times New Romans</option>
+                            <option class="Arial" value="he">Arial</option>
+                        </select>
+                        <button> <img class="img-btn" src="icons/paint-board-and-brush.png" alt=""></button>
+                        <button> <img class="img-btn" src="icons/text stroke.png" alt=""></button>
 
-            <div class="img-container">
-                <!-- <div><img src="img/1.jpg"></div>
-                <div><img src="img/2.jpg"></div>
-                <div><img src="img/3.jpg"></div>
-                <div><img src="img/4.jpg"></div>
-                <div><img src="img/5.jpg"></div>
-                <div><img src="img/6.jpg"></div>
-                <div><img src="img/7.jpg"></div>
-                <div><img src="img/8.jpg"></div>
-                <div><img src="img/9.jpg"></div>
-                <div><img src="img/10.jpg"></div>
-                <div><img src="img/11.jpg"></div>
-                <div><img src="img/12.jpg"></div>
-                <div><img src="img/13.jpg"></div>
-                <div><img src="img/14.jpg"></div>
-                <div><img src="img/15.jpg"></div> -->
+                    </div>
+
+
+
+                </div>
             </div>
 
-
-
         </section>
-        <section class="main-canvas main-layout"></section>
-        <section class="main-my-memes main-layout"></section>
-        <section class="main-about main-layout"></section>
+        <section class="main-my-memes main-layout hide"></section>
+        <section class="main-about main-layout hide"></section>
     </main>
 
-    <footer class="main-footer">
+    <!-- <footer class="main-footer">
         <div class="footer-container main-layout">
             <div class="logo"> meme generator</div>
             <small> © 2021 - all rights reserved - Nofar Alon</small>
         </div>
-    </footer>
+    </footer> -->
 
 
 
@@ -68,9 +83,9 @@
 
     <script src="js/storage.service.js"></script>
     <script src="js/util.js"></script>
+    <script src="js/memes-service.js"></script>
     <script src="js/gallery-service.js"></script>
     <script src="js/gallery-controller.js"></script>
-    <script src="js/memes-service.js"></script>
     <!-- <script src="js/memes-controller.js"></script> -->
 
 </body>

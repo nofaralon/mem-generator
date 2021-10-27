@@ -25,6 +25,30 @@ body {
     margin: 0 auto;
 }
 
+.hide {
+    display: none;
+}
+
+.impact {
+    font-family: impact;
+}
+
+.verdana {
+    font-family: Verdana;
+}
+
+.georgia {
+    font-family: Georgia;
+}
+
+.times {
+    font-family: Times;
+}
+
+.arial {
+    font-family: Arial;
+}
+
 
 /* HEADER */
 
@@ -102,6 +126,21 @@ body {
 
 
 /* MAIM-CANVAS */
+
+.canvas-container {
+    display: flex;
+}
+
+.canva-aditor {
+    flex-grow: 1;
+    background-color: coral;
+}
+
+.img-btn {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+}
 
 
 /* MAIN-MY MAMES */
