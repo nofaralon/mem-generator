@@ -9,6 +9,19 @@ function init() {
 
 }
 
+
+function toggleMenu() {
+    var elNav = document.querySelector('.main-nav')
+    elNav.classList.toggle('main-nav-open');
+    var elBtn = document.querySelector('.btn-menu')
+    if (elNav.classList.contains('main-nav-open')) {
+        elBtn.innerText = 'X'
+    } else {
+        elBtn.innerText = '☰'
+    }
+
+}
+
 function renderImgs() {
     var imgs = getImgs()
 
