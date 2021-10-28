@@ -14,6 +14,7 @@ function renderTextTop() {
 function onChangeTextTop(newText) {
     gMeme.lines[0].txt = newText
     drawImg2(gMeme.selectedImgId)
+    gLineIdx = 0
 
 }
 
@@ -40,47 +41,52 @@ function onChangeTextBottom(newText) {
     gMeme.lines[1].txt = newText
     drawImg2(gMeme.selectedImgId)
 
-}
-
-function onFontIncrease() {
-    gMeme.lines[0].size += 2
-    drawImg2(gMeme.selectedImgId)
+    gLineIdx = 1
 
 }
 
-function onFontDcrease() {
-    gMeme.lines[0].size -= 2
-    drawImg2(gMeme.selectedImgId)
+
+function onChangFontSize(fontsize) {
+
+    if (fontsize === 'decrease') {
+        gMeme.lines[gLineIdx].size -= 2
+        drawImg2(gMeme.selectedImgId)
+    } else {
+        gMeme.lines[gLineIdx].size += 2
+        drawImg2(gMeme.selectedImgId)
+    }
+
 }
 
 function onRemoveLine() {
-    gMeme.lines[0].txt = ' '
+    gMeme.lines[gLineIdx].txt = ' '
     drawImg2(gMeme.selectedImgId)
 }
 
 function onSetfont(NewFont) {
-    gMeme.lines[0].font = NewFont
+    gMeme.lines[gLineIdx].font = NewFont
     drawImg2(gMeme.selectedImgId)
 
 }
 
 function onAlignText(align) {
-    gMeme.lines[0].align = align
+    gMeme.lines[gLineIdx].align = align
     drawImg2(gMeme.selectedImgId)
 }
 
 function onSetStrokeText(strokeText) {
-    gMeme.lines[0].strokeColor = strokeText
+    gMeme.lines[gLineIdx].strokeColor = strokeText
     drawImg2(gMeme.selectedImgId)
 }
 
 
 function onSetFillText(fillText) {
-    gMeme.lines[0].fillColor = fillText
+    gMeme.lines[gLineIdx].fillColor = fillText
     drawImg2(gMeme.selectedImgId)
 }
 
 function onMove(movment) {
+
     console.log(gMeme.lines[0].pos.x);
     console.log(gMeme.lines[0].pos.y);
 

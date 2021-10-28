@@ -3,7 +3,7 @@
 var gElCanvas;
 var gCtx;
 
-
+var gLineIdx;
 
 var gMeme = {
     selectedImgId: 0,
@@ -47,7 +47,10 @@ function drawImg2(imgId) {
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
         renderTextTop()
-        renderTextBottom()
+        if (gMeme.lines.length > 1) {
+            renderTextBottom()
+
+        }
 
     };
 
