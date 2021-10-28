@@ -25,5 +25,6 @@ function onSelectedImg(imgId) {
     var elCanvas = document.querySelector('.main-canvas')
     elCanvas.classList.remove('hide')
     updateGmeme(imgId)
+    gCtx.clearRect(0, 0, gElCanvas.width, gElCanvas.height)
     drawImg2(gMeme.selectedImgId)
 }
