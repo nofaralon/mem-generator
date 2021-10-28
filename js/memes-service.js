@@ -26,10 +26,9 @@ function updateGmeme(imgId) {
     gMeme.selectedImgId = imgId
 }
 
-function drawText(x, y) {
+function drawText(idx) {
     // var text = gMeme.lines[0].txt
-    var line = gMeme.lines[0]
-    console.log(gMeme.lines[0]);
+    var line = gMeme.lines[idx]
     const { pos, txt, size, fillColor, strokeColor, font, align } = line
 
     gCtx.lineWidth = 2;
@@ -48,6 +47,7 @@ function drawImg2(imgId) {
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
         renderTextTop()
+        renderTextBottom()
 
     };
 
@@ -59,7 +59,35 @@ function downloadCanvas(elLink) {
     elLink.download = 'My-Meme';
 }
 
+function createLine(pos) {
 
+    var line = {
+        pos: pos,
+        txt: ' ',
+        size: 50,
+        align: 'center',
+        fillColor: 'white',
+        strokeColor: 'black',
+        font: 'impact'
+    }
+    gMeme.lines.push(line)
+}
+
+function addline() {
+    if (gMeme.lines.length === 1) {
+        var posBottom = {
+            x: gElCanvas.width / 2,
+            y: gElCanvas.height / 1.2,
+        }
+        createLine(posBottom)
+    } else {
+        var posCenter = {
+            x: gElCanvas.width / 2,
+            y: gElCanvas.height / 2,
+        }
+        createLine(posCenter)
+    }
+}
 
 
 // var elInput = document.querySelector('.text-meme')
