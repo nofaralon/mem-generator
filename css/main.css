@@ -104,7 +104,7 @@ body {
 }
 
 .main-nav a {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     background-color: #ff8000c5;
     width: 100%;
@@ -240,6 +240,7 @@ body {
     border-radius: 5px;
     text-decoration: none;
     margin: 5px;
+    text-align: center;
 }
 
 .inputs {
@@ -257,6 +258,7 @@ body {
     top: 100px;
     left: 20px;
     font-size: 20px;
+    opacity: 0;
 }
 
 .share {
@@ -332,6 +334,7 @@ body {
         width: 100px;
         text-align: center;
         padding-top: 30px;
+        font-size: 1rem;
     }
     /* .main-nav>*:not(:last-child) {
         border-right: 1px solid white;

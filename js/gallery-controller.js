@@ -2,7 +2,6 @@
 
 
 function init() {
-    console.log('hi');
     renderImgs()
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');

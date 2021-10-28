@@ -2,8 +2,8 @@
 var gIdx = 1;
 var gImgs;
 
-var res = createImgs()
-console.log(res);
+var imgs = createImgs()
+    // console.log(res);
 
 
 function createImg(id = gIdx++, keywords = ['happy']) {
