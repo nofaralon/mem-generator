@@ -3,20 +3,44 @@
 function renderTextTop() {
     var posTop = {
         x: gElCanvas.width / 2,
-        y: gElCanvas.height / 4,
+        y: gElCanvas.height / 8,
     }
     gMeme.lines[0].pos = posTop
 
-    drawText(posTop.x, posTop.y)
+    drawText(0)
 }
 
 
 function onChangeTextTop(newText) {
     gMeme.lines[0].txt = newText
     drawImg2(gMeme.selectedImgId)
-    var elInput = document.querySelector('.text-meme')
+
 }
 
+
+function onAddLine() {
+    var elInput = document.querySelector('.text-bottom')
+    elInput.style.opacity = 1
+    addline()
+
+}
+
+
+function renderTextBottom() {
+    var posBottom = {
+        x: gElCanvas.width / 2,
+        y: gElCanvas.height / 1.2,
+    }
+    gMeme.lines[1].pos = posBottom
+
+    drawText(1)
+}
+
+function onChangeTextBottom(newText) {
+    gMeme.lines[1].txt = newText
+    drawImg2(gMeme.selectedImgId)
+
+}
 
 function onFontIncrease() {
     gMeme.lines[0].size += 2
