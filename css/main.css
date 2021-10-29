@@ -228,6 +228,8 @@ body {
 .fonts {
     height: 30px;
     width: 200px;
+    background-color: #efefef;
+    border-radius: 5px;
 }
 
 .btn {

@@ -1,10 +1,10 @@
 'use strict'
 
+const MEME_KEY = 'memes';
+
 var gElCanvas;
 var gCtx;
-
 var gLineIdx;
-
 var gMeme = {
     selectedImgId: 0,
     selectedLineIdx: 0,

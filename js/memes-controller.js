@@ -1,50 +1,30 @@
 'use strict'
 
 function renderTextTop() {
-    // var posTop = {
-    //     x: gElCanvas.width / 2,
-    //     y: gElCanvas.height / 8,
-    // }
-    // gMeme.lines[0].pos = posTop
-
     drawText(0)
 }
-
 
 function onChangeTextTop(newText) {
     gMeme.lines[0].txt = newText
     drawImg2(gMeme.selectedImgId)
     gLineIdx = 0
-
 }
-
 
 function onAddLine() {
     var elInput = document.querySelector('.text-bottom')
     elInput.style.opacity = 1
     addline()
-
 }
 
-
 function renderTextBottom() {
-    // var posBottom = {
-    //     x: gElCanvas.width / 2,
-    //     y: gElCanvas.height / 1.2,
-    // }
-    // gMeme.lines[1].pos = posBottom
-
     drawText(1)
 }
 
 function onChangeTextBottom(newText) {
     gMeme.lines[1].txt = newText
     drawImg2(gMeme.selectedImgId)
-
     gLineIdx = 1
-
 }
-
 
 function onChangFontSize(fontsize) {
 
@@ -66,7 +46,6 @@ function onRemoveLine() {
 function onSetfont(NewFont) {
     gMeme.lines[gLineIdx].font = NewFont
     drawImg2(gMeme.selectedImgId)
-
 }
 
 function onAlignText(align) {
@@ -79,7 +58,6 @@ function onSetStrokeText(strokeText) {
     drawImg2(gMeme.selectedImgId)
 }
 
-
 function onSetFillText(fillText) {
     gMeme.lines[gLineIdx].fillColor = fillText
     drawImg2(gMeme.selectedImgId)
@@ -88,13 +66,22 @@ function onSetFillText(fillText) {
 function onMoveDwon() {
     gMeme.lines[gLineIdx].pos.y += 10
     drawImg2(gMeme.selectedImgId)
-
 }
-
-
 
 function onMoveUp() {
     gMeme.lines[gLineIdx].pos.y -= 2
     drawImg2(gMeme.selectedImgId)
-
 }
+
+// function onSaveMyMeme() {
+//     var meme = Object.assign({}, gMeme)
+//     saveToStorage(MEME_KEY, meme)
+//         gMeme.lines[0].txt = ' '
+//         gMeme.lines[1].txt = ' '
+//     var elTopText = document.querySelector('.text-top')
+//     elTopText.placeholder = 'Enter Top text '
+//     var elBottomText = document.querySelector('.text-bottom')
+//     elBottomText.placeholder = 'Enter Bottom text'
+
+
+// }
