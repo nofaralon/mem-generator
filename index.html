@@ -15,9 +15,9 @@
         <div class="header-container main-layout">
             <div class="logo"> MEME GEN </div>
             <nav class="main-nav">
-                <a href="">Gallery</a>
-                <a href="">My Memes</a>
-                <a href="">About</a>
+                <a data-trans="gallery" onclick="onOpenGallery()">Gallery</a>
+                <a data-trans="my-memes" onclick="onOpenMyMemes()">My Memes</a>
+                <a data-trans="about">About</a>
             </nav>
             <button class="btn-menu" onclick="toggleMenu()">☰</button>
 
@@ -25,16 +25,25 @@
         </div>
     </header>
 
+
     <main class="main-container">
+
+        <section class="lang main-layout">
+            <select class="trans" onchange="onSetLang(this.value)">
+                <option value="en">English</option>
+                <option value="he">עברית</option>
+            </select>
+        </section>
+
         <section class="main-gallery main-layout">
             <div class="srearch-container">
-                <input class="search-keyword" list="search-keyword" type="text" placeholder="Enter search keyword">
+                <input data-trans="search" class="search-keyword" list="search-keyword" type="text" placeholder="Enter search keyword">
                 <datalist id="search-keyword">
-                    <option value="Funny">
-                    <option value="Sad">
-                    <option value="Animal">
-                    <option value="sleep">
-                    <option value="lovley">
+                    <option data-trans="funny" value="Funny">
+                    <option data-trans="sad" value="Sad">
+                    <option data-trans="animals" value="Animals">
+                    <option data-trans="sleep" value="sleep">
+                    <option data-trans="lovley" value="lovley">
                 </datalist>
 
                 <img src="icons/search-icon.png">
@@ -45,8 +54,8 @@
             <div class="canvas-container">
                 <canvas id="my-canvas" width="500" height="500" style="outline:1px solid black"></canvas>
                 <div class="canva-aditor">
-                    <input oninput="onChangeTextTop(this.value)" class="text-top" type="text" placeholder="Enter Top text ">
-                    <input oninput="onChangeTextBottom(this.value)" class="text-bottom" type="text" placeholder="Enter Bottom text">
+                    <input data-trans="top-text" oninput="onChangeTextTop(this.value)" class="text-top" type="text" placeholder="Enter Top text ">
+                    <input data-trans="bottom-text" oninput="onChangeTextBottom(this.value)" class="text-bottom" type="text" placeholder="Enter Bottom text">
                     <div class="buttons-container1">
                         <button title="Move-Up"> <img onclick="onMoveUp()" class="img-btn" src="icons/move-up.png" alt=""></button>
                         <button title="Move-Dwon"> <img onclick="onMoveDwon()" class="img-btn" src="icons/move-dwon.png" alt=""></button>
@@ -80,10 +89,10 @@
 
                     <div class="inputs">
 
-                        <a href="#" class="btn" onclick="downloadCanvas(this)" download="my-img.jpg">Download as jpeg</a>
+                        <a data-trans="download" href="#" class="btn" onclick="downloadCanvas(this)" download="my-img.jpg">Download as jpeg</a>
                         <p class="user-msg"></p>
 
-                        <button class="btn" onclick="uploadImg()">Upload Image from Canvas</button>
+                        <button data-trans="upload" class="btn" onclick="uploadImg()">Upload Image from Canvas</button>
                         <div class="share-container"></div>
 
 
@@ -96,7 +105,7 @@
 
         </section>
         <section class="main-my-memes main-layout hide"></section>
-        <section class="main-about main-layout hide"></section>
+        <!-- <section class="main-about main-layout hide"></section> -->
     </main>
 
     <footer class="main-footer">
@@ -111,7 +120,8 @@
 
 
     <!-- <script src="js/storage.service.js"></script> -->
-    <script src="js/util.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/memes-controller.js"></script>
     <script src="js/memes-service.js"></script>
     <script src="js/gallery-service.js"></script>

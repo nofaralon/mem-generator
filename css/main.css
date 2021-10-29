@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -287,6 +288,29 @@ body {
 }
 
 
+/* TRANSLETION */
+
+.lang {
+    display: flex;
+    align-items: flex-end;
+}
+
+.trans {
+    border-radius: 5px;
+    height: 20px;
+    width: 90px;
+}
+
+.rtl {
+    direction: rtl;
+    font-family: 'Varela Round', sans-serif;
+}
+
+body.rtl .header-container {
+    flex-direction: row-reverse;
+}
+
+
 /* RESPONSIVITY */
 
 
@@ -343,6 +367,7 @@ body {
         padding: 10px 0;
     }
     .canva-aditor {
+        padding-right: 15px;
         padding-left: 15px;
     }
 }
