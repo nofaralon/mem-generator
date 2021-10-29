@@ -9,7 +9,7 @@ var gMeme = {
     selectedImgId: 0,
     selectedLineIdx: 0,
     lines: [{
-        pos: { x: 50, y: 50 },
+        pos: { x: 250, y: 50 },
         txt: ' ',
         size: 50,
         align: 'center',
@@ -27,7 +27,6 @@ function updateGmeme(imgId) {
 }
 
 function drawText(idx) {
-    // var text = gMeme.lines[0].txt
     var line = gMeme.lines[idx]
     const { pos, txt, size, fillColor, strokeColor, font, align } = line
 

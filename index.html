@@ -13,7 +13,7 @@
 
     <header class="main-header">
         <div class="header-container main-layout">
-            <div class="logo"> meme generator</div>
+            <div class="logo"> MEME GEN </div>
             <nav class="main-nav">
                 <a href="">Gallery</a>
                 <a href="">My Memes</a>
@@ -49,7 +49,7 @@
                     <input oninput="onChangeTextBottom(this.value)" class="text-bottom" type="text" placeholder="Enter Bottom text">
                     <div class="buttons-container1">
                         <button title="Move-Up"> <img onclick="onMoveUp()" class="img-btn" src="icons/move-up.png" alt=""></button>
-                        <button title="Move-Dwon"> <img onclick="onMove('dwon')" class="img-btn" src="icons/move-dwon.png" alt=""></button>
+                        <button title="Move-Dwon"> <img onclick="onMoveDwon()" class="img-btn" src="icons/move-dwon.png" alt=""></button>
                         <button title="Swich-Lines"> <img class="img-btn" src="icons/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
                         <button title="Add-Line"> <img onclick="onAddLine()" class="img-btn" src="icons/add.png" alt=""></button>
                         <button title="Remove-Line"> <img onclick="onRemoveLine()" class="img-btn" src="icons/trash.png" alt=""></button>
@@ -63,11 +63,11 @@
                     </div>
                     <div class="buttons-container3">
                         <select title="Change-Font" class="fonts" onchange="onSetfont(this.value)">
-                            <option class="impact" value="en">impact</option>
-                            <option class="Verdana" value="he">Verdana</option>
-                            <option class="Georgia" value="he">Georgia</option>
-                            <option class="Times" value="he">Times New Romans</option>
-                            <option class="Arial" value="he">Arial</option>
+                            <option class="impact" value="impact">impact</option>
+                            <option class="Verdana" value="Verdana">Verdana</option>
+                            <option class="Georgia" value="Georgia">Georgia</option>
+                            <option class="Times" value="Times">Times New Romans</option>
+                            <option class="Arial" value="Arial">Arial</option>
                         </select>
                         <input onchange="onSetStrokeText(this.value)" title="Text-Stroke" type="color" value="#000000">
                         <input onchange="onSetFillText(this.value)" title="Text-Fill" type="color" value="#000000">
@@ -101,7 +101,7 @@
 
     <footer class="main-footer">
         <div class="footer-container main-layout">
-            <div class="logo"> meme generator</div>
+            <div class="logo"> MEME GEN</div>
             <small> © 2021 - all rights reserved - Nofar Alon</small>
         </div>
     </footer>

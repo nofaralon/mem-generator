@@ -1,11 +1,11 @@
 'use strict'
 
 function renderTextTop() {
-    var posTop = {
-        x: gElCanvas.width / 2,
-        y: gElCanvas.height / 8,
-    }
-    gMeme.lines[0].pos = posTop
+    // var posTop = {
+    //     x: gElCanvas.width / 2,
+    //     y: gElCanvas.height / 8,
+    // }
+    // gMeme.lines[0].pos = posTop
 
     drawText(0)
 }
@@ -28,11 +28,11 @@ function onAddLine() {
 
 
 function renderTextBottom() {
-    var posBottom = {
-        x: gElCanvas.width / 2,
-        y: gElCanvas.height / 1.2,
-    }
-    gMeme.lines[1].pos = posBottom
+    // var posBottom = {
+    //     x: gElCanvas.width / 2,
+    //     y: gElCanvas.height / 1.2,
+    // }
+    // gMeme.lines[1].pos = posBottom
 
     drawText(1)
 }
@@ -85,33 +85,16 @@ function onSetFillText(fillText) {
     drawImg2(gMeme.selectedImgId)
 }
 
-function onMove(movment) {
-
-    console.log(gMeme.lines[0].pos.x);
-    console.log(gMeme.lines[0].pos.y);
-
-    if (movment === 'up') {
-        gMeme.lines[0].pos.x += 2
-        gMeme.lines[0].pos.y += 2
-        drawImg2(gMeme.selectedImgId)
-    } else {
-        gMeme.lines[0].pos.x -= 2
-        gMeme.lines[0].pos.y -= 2
-        drawImg2(gMeme.selectedImgId)
-    }
-
+function onMoveDwon() {
+    gMeme.lines[gLineIdx].pos.y += 10
+    drawImg2(gMeme.selectedImgId)
 
 }
 
 
 
 function onMoveUp() {
-    console.log(gMeme.lines[0].pos.x);
-    console.log(gMeme.lines[0].pos.y);
-    gMeme.lines[0].pos.x += 100
-    gMeme.lines[0].pos.y += 100
-    console.log(gMeme.lines[0].pos.x);
-    console.log(gMeme.lines[0].pos.y);
+    gMeme.lines[gLineIdx].pos.y -= 2
     drawImg2(gMeme.selectedImgId)
 
 }
