@@ -21,9 +21,13 @@ var gTrans = {
         en: 'Funny',
         he: 'מצחיק'
     },
-    sad: {
-        en: 'Sad',
-        he: 'עצוב'
+    all: {
+        en: 'All',
+        he: 'כל התמונות'
+    },
+    Happy: {
+        en: 'Happy',
+        he: 'שמח'
     },
     animals: {
         en: 'Animals',

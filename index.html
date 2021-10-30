@@ -37,17 +37,28 @@
 
         <section class="main-gallery main-layout">
             <div class="srearch-container">
-                <input data-trans="search" class="search-keyword" list="search-keyword" type="text" placeholder="Enter search keyword">
-                <datalist id="search-keyword">
-                    <option data-trans="funny" value="Funny">
-                    <option data-trans="sad" value="Sad">
-                    <option data-trans="animals" value="Animals">
-                    <option data-trans="sleep" value="sleep">
-                    <option data-trans="lovley" value="lovley">
-                </datalist>
+                <div class="search">
+                    <input data-trans="search" onchange="onFillterImgs(this.value)" class="search-keyword" list="search-keyword" type="text" placeholder="Enter search keyword">
+                    <datalist id="search-keyword">
+                        <option data-trans="funny" value="Funny">
+                        <option data-trans="Happy" value="Happy">
+                        <option data-trans="animals" value="Animals">
+                        <option data-trans="sleep" value="Sleep">
+                        <option data-trans="lovley" value="Lovley">
+                    </datalist>
+                    <img src="icons/search-icon.png">
+                </div>
 
-                <img src="icons/search-icon.png">
+                <div class="keyword-container">
+                    <div data-trans="Happy" onclick="onUpdateKeyword('happy')" class="happy">Happy</div>
+                    <div data-trans="funny" onclick="onUpdateKeyword('funny')" class="funny">Funny</div>
+                    <div data-trans="sleep" onclick="onUpdateKeyword('sleep')" class="sleep">Sleep</div>
+                    <div data-trans="lovley" onclick="onUpdateKeyword('lovely')" class="lovely">Lovely</div>
+                    <div data-trans="animals" onclick="onUpdateKeyword('animals')" class="animals">Animals</div>
+                </div>
             </div>
+
+
             <div class="img-container"></div>
         </section>
         <section class="main-canvas main-layout hide">
