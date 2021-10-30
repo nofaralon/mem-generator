@@ -35,6 +35,7 @@ function onOpenGallery() {
     elGallery.classList.remove('hide')
     var elCanvas = document.querySelector('.main-canvas')
     elCanvas.classList.add('hide')
+    toggleMenu()
 }
 
 function onSetLang(lang) {
