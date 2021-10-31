@@ -65,12 +65,12 @@
             <div class="canvas-container">
                 <canvas id="my-canvas" width="500" height="500" style="outline:1px solid black"></canvas>
                 <div class="canva-aditor">
-                    <input data-trans="top-text" oninput="onChangeTextTop(this.value)" class="text-top" type="text" placeholder="Enter Top text ">
-                    <input data-trans="bottom-text" oninput="onChangeTextBottom(this.value)" class="text-bottom" type="text" placeholder="Enter Bottom text">
+                    <input data-trans="top-text" oninput="onChangeText(this.value)" class="text-meme" type="text" placeholder="Enter Top text ">
+                    <!-- <input data-trans="bottom-text" oninput="onChangeTextBottom(this.value)" class="text-bottom" type="text" placeholder="Enter Bottom text"> -->
                     <div class="buttons-container1">
                         <button title="Move-Up"> <img onclick="onMoveUp()" class="img-btn" src="icons/move-up.png" alt=""></button>
                         <button title="Move-Dwon"> <img onclick="onMoveDwon()" class="img-btn" src="icons/move-dwon.png" alt=""></button>
-                        <button title="Swich-Lines"> <img class="img-btn" src="icons/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
+                        <button title="Swich-Lines"> <img onclick="onSwichLine()" class="img-btn" src="icons/up-and-down-opposite-double-arrows-side-by-side.png" alt=""></button>
                         <button title="Add-Line"> <img onclick="onAddLine()" class="img-btn" src="icons/add.png" alt=""></button>
                         <button title="Remove-Line"> <img onclick="onRemoveLine()" class="img-btn" src="icons/trash.png" alt=""></button>
                     </div>

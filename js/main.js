@@ -4,7 +4,7 @@ function init() {
     renderImgs()
     gElCanvas = document.getElementById('my-canvas');
     gCtx = gElCanvas.getContext('2d');
-
+    addListeners()
 }
 
 
