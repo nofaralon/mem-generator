@@ -25,6 +25,25 @@ var gMeme = {
 }
 
 
+function reset() {
+    gMeme = {
+        selectedImgId: 0,
+        selectedLineIdx: 0,
+        lines: [{
+            pos: { x: 250, y: 50 },
+            txt: ' ',
+            size: 50,
+            align: 'center',
+            fillColor: 'white',
+            strokeColor: 'black',
+            font: 'impact',
+            isDrag: false
+        }]
+    }
+    var gMarkLine = 0;
+
+}
+
 function createLine(pos) {
 
     var line = {
@@ -149,7 +168,6 @@ function drawBorder() {
 
 function switchLine() {
     if (!gMeme.lines.length) return;
-    // drawImg2(gMeme.selectedImgId)
     if (gMeme.selectedLineIdx < gMeme.lines.length - 1) {
         gMeme.selectedLineIdx++;
     } else {
@@ -159,11 +177,12 @@ function switchLine() {
 
 function addRect(posY, size) {
     gCtx.beginPath();
-    gCtx.strokeStyle = 'red';
+    gCtx.strokeStyle = 'res';
     gCtx.rect(0, posY - size, gElCanvas.width, size + 10);
     gCtx.stroke();
     gCtx.closePath();
 }
+
 
 function isLineClicked(clickedPos) {
     const { pos } = gMeme.lines[gMeme.selectedLineIdx]
@@ -186,4 +205,16 @@ function moveLine(dx, dy) {
 
 function getLine() {
     return gMeme.lines[gMeme.selectedLineIdx]
+}
+
+
+function clearborder() {
+    var img = new Image();
+    img.src = `img/${gMeme.selectedImgId}.jpg`
+    img.onload = () => {
+        gCtx.drawImage(img, 0, 0, gElCanvas.width, gElCanvas.height);
+        renderText()
+
+    };
+
 }

@@ -13,20 +13,6 @@ function createImg(keywords = ['happy'], id = gIdx++) {
     return img
 }
 
-// function createImgs() {
-//     var imgs = [];
-
-//     for (var i = 0; i < 18; i++) {
-//         var img = createImg();
-//         imgs.push(img)
-//     }
-//     gImgs = imgs;
-
-//     return gImgs;
-
-
-// }
-
 
 function createImgs() {
     var imgs = [
@@ -48,15 +34,10 @@ function createImgs() {
         createImg(['Funny']),
         createImg(['Funny']),
         createImg(['Happy'])
-
     ];
 
     gImgs = imgs;
-    console.log(gImgs);
-
     return gImgs;
-
-
 }
 
 function getImgs() {

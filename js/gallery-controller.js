@@ -13,6 +13,11 @@ function renderImgs() {
 }
 
 function onSelectedImg(imgId) {
+    reset()
+    var elGallery = document.querySelector('.main-my-memes')
+    elGallery.classList.add('hide')
+    var elInput = document.querySelector('.text-meme')
+    elInput.value = ' '
     var elGallery = document.querySelector('.main-gallery')
     elGallery.classList.add('hide')
     var elCanvas = document.querySelector('.main-canvas')

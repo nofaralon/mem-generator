@@ -1,4 +1,7 @@
 function uploadImg() {
+    var currentLine = gMeme.lines[gMeme.selectedLineIdx];
+    removeRect(currentLine.pos.y, currentLine.size)
+
     const imgDataUrl = gElCanvas.toDataURL("image/jpeg");
 
     // A function to be called if request succeeds

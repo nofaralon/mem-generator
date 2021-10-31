@@ -50,16 +50,20 @@ var gTrans = {
         he: 'טקסט שורה תחתונה'
     },
     download: {
-        en: 'Download as jpeg',
+        en: 'Download',
         he: 'הורד '
     },
     upload: {
-        en: 'Upload Image from Canvas',
+        en: 'Upload Image',
         he: 'העלאת תמונה מהקאנבס'
     },
     share: {
         en: 'Share',
         he: 'שתף'
+    },
+    save: {
+        en: 'Save your Meme!',
+        he: 'שמור את המים שלך!'
     }
 }
 

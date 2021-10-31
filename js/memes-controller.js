@@ -66,10 +66,7 @@ function onMoveUp() {
 function addListeners() {
     addMouseListeners()
     addTouchListeners()
-    window.addEventListener('resize', () => {
-        resizeCanvas()
-        drawImg2(gMeme.selectedImgId)
-    })
+
 }
 
 function addMouseListeners() {
@@ -109,11 +106,7 @@ function onUp() {
     document.body.style.cursor = 'grab'
 }
 
-function resizeCanvas() {
-    const elContainer = document.querySelector('.canvas-container')
-    gElCanvas.width = elContainer.offsetWidth
-    gElCanvas.height = elContainer.offsetHeight
-}
+
 
 function getEvPos(ev) {
     var pos = {
@@ -129,4 +122,13 @@ function getEvPos(ev) {
         }
     }
     return pos
+}
+
+
+function onSaveMeme() {
+    var myMemes = loadFromStorage(MEME_KEY)
+    if (!myMemes) var myMemes = []
+    var img = gElCanvas.toDataURL("image/png")
+    myMemes.push(img);
+    saveToStorage(MEME_KEY, myMemes)
 }
