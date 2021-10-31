@@ -5,9 +5,8 @@ function renderTextTop() {
 }
 
 function onChangeTextTop(newText) {
-    gMeme.lines[0].txt = newText
+    changeTopText(newText)
     drawImg2(gMeme.selectedImgId)
-    gLineIdx = 0
 }
 
 function onAddLine() {
@@ -21,67 +20,46 @@ function renderTextBottom() {
 }
 
 function onChangeTextBottom(newText) {
-    gMeme.lines[1].txt = newText
+    changeTextBottom(newText)
     drawImg2(gMeme.selectedImgId)
-    gLineIdx = 1
 }
 
 function onChangFontSize(fontsize) {
-
-    if (fontsize === 'decrease') {
-        gMeme.lines[gLineIdx].size -= 2
-        drawImg2(gMeme.selectedImgId)
-    } else {
-        gMeme.lines[gLineIdx].size += 2
-        drawImg2(gMeme.selectedImgId)
-    }
-
+    changFontSize(fontsize)
+    drawImg2(gMeme.selectedImgId)
 }
 
 function onRemoveLine() {
-    gMeme.lines[gLineIdx].txt = ' '
+    removeLine()
     drawImg2(gMeme.selectedImgId)
 }
 
 function onSetfont(NewFont) {
-    gMeme.lines[gLineIdx].font = NewFont
+    setfont(NewFont)
     drawImg2(gMeme.selectedImgId)
 }
 
 function onAlignText(align) {
-    gMeme.lines[gLineIdx].align = align
+    alignText(align)
     drawImg2(gMeme.selectedImgId)
 }
 
 function onSetStrokeText(strokeText) {
-    gMeme.lines[gLineIdx].strokeColor = strokeText
+    setStrokeText(strokeText)
     drawImg2(gMeme.selectedImgId)
 }
 
 function onSetFillText(fillText) {
-    gMeme.lines[gLineIdx].fillColor = fillText
+    setFillText(fillText)
     drawImg2(gMeme.selectedImgId)
 }
 
 function onMoveDwon() {
-    gMeme.lines[gLineIdx].pos.y += 10
+    moveDwon()
     drawImg2(gMeme.selectedImgId)
 }
 
 function onMoveUp() {
-    gMeme.lines[gLineIdx].pos.y -= 2
+    moveUp()
     drawImg2(gMeme.selectedImgId)
 }
-
-// function onSaveMyMeme() {
-//     var meme = Object.assign({}, gMeme)
-//     saveToStorage(MEME_KEY, meme)
-//         gMeme.lines[0].txt = ' '
-//         gMeme.lines[1].txt = ' '
-//     var elTopText = document.querySelector('.text-top')
-//     elTopText.placeholder = 'Enter Top text '
-//     var elBottomText = document.querySelector('.text-bottom')
-//     elBottomText.placeholder = 'Enter Bottom text'
-
-
-// }

@@ -19,11 +19,87 @@ var gMeme = {
     }]
 }
 
+function changeTopText(newText) {
+    gMeme.lines[0].txt = newText
+    gLineIdx = 0
+}
 
+function createLine(pos) {
 
+    var line = {
+        pos: pos,
+        txt: ' ',
+        size: 50,
+        align: 'center',
+        fillColor: 'white',
+        strokeColor: 'black',
+        font: 'impact'
+    }
+    gMeme.lines.push(line)
+}
+
+function addline() {
+    if (gMeme.lines.length === 1) {
+        var posBottom = {
+            x: gElCanvas.width / 2,
+            y: gElCanvas.height / 1.2,
+        }
+        createLine(posBottom)
+    } else {
+        var posCenter = {
+            x: gElCanvas.width / 2,
+            y: gElCanvas.height / 2,
+        }
+        createLine(posCenter)
+    }
+}
+
+function changeTextBottom(newText) {
+    gMeme.lines[1].txt = newText
+    gLineIdx = 1
+}
+
+function removeLine() {
+    gMeme.lines[gLineIdx].txt = ' '
+}
+
+function setfont(NewFont) {
+    gMeme.lines[gLineIdx].font = NewFont
+}
+
+function alignText(align) {
+    gMeme.lines[gLineIdx].align = align
+}
+
+function setStrokeText(strokeText) {
+    gMeme.lines[gLineIdx].strokeColor = strokeText
+
+}
+
+function setFillText(fillText) {
+    gMeme.lines[gLineIdx].fillColor = fillText
+
+}
+
+function moveDwon() {
+    gMeme.lines[gLineIdx].pos.y += 10
+}
 
 function updateGmeme(imgId) {
     gMeme.selectedImgId = imgId
+}
+
+function moveUp() {
+    gMeme.lines[gLineIdx].pos.y -= 2
+}
+
+function changFontSize(fontsize) {
+    if (fontsize === 'decrease') {
+        gMeme.lines[gLineIdx].size -= 2
+    } else {
+        gMeme.lines[gLineIdx].size += 2
+    }
+
 }
 
 function drawText(idx) {
@@ -60,45 +136,3 @@ function downloadCanvas(elLink) {
     elLink.href = data;
     elLink.download = 'My-Meme';
 }
-
-function createLine(pos) {
-
-    var line = {
-        pos: pos,
-        txt: ' ',
-        size: 50,
-        align: 'center',
-        fillColor: 'white',
-        strokeColor: 'black',
-        font: 'impact'
-    }
-    gMeme.lines.push(line)
-}
-
-function addline() {
-    if (gMeme.lines.length === 1) {
-        var posBottom = {
-            x: gElCanvas.width / 2,
-            y: gElCanvas.height / 1.2,
-        }
-        createLine(posBottom)
-    } else {
-        var posCenter = {
-            x: gElCanvas.width / 2,
-            y: gElCanvas.height / 2,
-        }
-        createLine(posCenter)
-    }
-}
-
-
-// var elInput = document.querySelector('.text-meme')
-// elInput.addEventListener('input', () => {
-//     console.log(gMeme.lines[0].txt);
-//     gMeme.lines[0].txt = elInput.value
-//     var txt = gMeme.lines[0].txt
-//     drawText(txt, 50, 50)
-//         // renderCanvas()
-
-
-// })
